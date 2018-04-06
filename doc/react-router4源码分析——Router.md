@@ -1,8 +1,5 @@
----
-title: react-router源码分析(2)—— Router
-date: 2017-12-25 18:50:13
-tags: [前端,学习,源码阅读,react]
----
+### react-router源码分析(2)—— Router
+
 　　通过对`BrowserRouter`、`MemoryRouter`、`HashRouter`源码的学习，我们知道了这三个组件都是对`Router`组件的封装，实际上就是通过对`Router`传入不同种类的createHistory()的值，来实现不同种类的`Router`。我们在了解到Router在react-router中属于基石般的存在后，我们来详细的学习一下它的源码。
 + <!-- more -->
 

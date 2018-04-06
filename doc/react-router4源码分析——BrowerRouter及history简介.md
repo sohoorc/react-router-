@@ -64,6 +64,7 @@ export default BrowserRouter;
 打印`createBrowserHistory`：
 
 ![](http://omla32aer.bkt.clouddn.com/browerHistory.png)
+
 　　在`BrowserRouter` 的reander方法中，我们可以看到，实际上该组将就是将Router组件进行了封装，并将`createBrowserHistory`方法创建的history对象通过props的形式传给Router组件。
 ```
 render() {
