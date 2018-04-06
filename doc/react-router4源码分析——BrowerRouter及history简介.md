@@ -2,8 +2,6 @@
 ### react-router源码分析(1)—— BrowserRouter及history简介
 
 　　使用react也有很长一段时间了，但一直停留在 “仅仅会使用” 阶段,没有更深入的了解底层实现的原理。趁着这几天有点空闲时间，打算深入了解react技术栈，从react-router开始，记录一系列react技术栈源码分析学习笔记。若有错误，希望能够不灵赐教。在此感谢！
-+ <!-- more -->
-
 　　众所周知，react-router是一个基于react的强大路由库，如今已经更新到react-router v4。在升级到4.X版本后，不同于之前版本的是，提出了just component的概念。每一个路由，同时也是一个组件，不再像之前版本那样路由和组件分开。在这里我们就不再说明如何使用该库，直接开始分析源码。　
 我们先从大家常用的 `BrowserRouter`(`BrowserRouter from react-router-dom`)开始：
 ```

@@ -1,8 +1,6 @@
 ### react-router源码分析(2)—— Router
 
 　　通过对`BrowserRouter`、`MemoryRouter`、`HashRouter`源码的学习，我们知道了这三个组件都是对`Router`组件的封装，实际上就是通过对`Router`传入不同种类的createHistory()的值，来实现不同种类的`Router`。我们在了解到Router在react-router中属于基石般的存在后，我们来详细的学习一下它的源码。
-+ <!-- more -->
-
 　　让我们来回忆一下Router组件的用法，它接收两个参数，history和children。history在上节中我们已经提到过，在此就不再做陈述。我们知道，`Router`组件在使用时，子组件只能包含一个dom节点。所以，我们猜测`Router`组件内的render函数内是这样的：
 ```
 static propTypes = {
