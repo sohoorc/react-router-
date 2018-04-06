@@ -1,8 +1,5 @@
----
-title: react-router源码分析(1)—— BrowserRouter及history简介
-date: 2017-12-05 20:10:20
-tags: [前端,学习,源码阅读,react]
----
+
+### react-router源码分析(1)—— BrowserRouter及history简介
 
 　　使用react也有很长一段时间了，但一直停留在 “仅仅会使用” 阶段,没有更深入的了解底层实现的原理。趁着这几天有点空闲时间，打算深入了解react技术栈，从react-router开始，记录一系列react技术栈源码分析学习笔记。若有错误，希望能够不灵赐教。在此感谢！
 + <!-- more -->
@@ -55,13 +52,17 @@ export default BrowserRouter;
 | createHashHistory | Hash history | HashRouter | 
 | createMemoryHistory| Memory history | MemoryRouter |
 当我们使用其中一个create方法创建了一个history对象之后，我们打印它的内容：
+
 ![](http://omla32aer.bkt.clouddn.com/browerHistory.png)
 可以看到，它所提供了一系列管理location的方法。我们通过history对象提供的方法，即可做到控制页面的跳转、回退、重定向等操作。
 
 　　`BrowserRouter`这个组件，其实就是使用了`history`中的`createBrowserHistory`方法来创建histroy对象。该histroy对象，就是我们平时在路由组件中所看到的`this.props.history`，我们通过控制台打印出来便可一目了然。
 打印`this.props.history`：
+
 ![](http://omla32aer.bkt.clouddn.com/props.png)
+
 打印`createBrowserHistory`：
+
 ![](http://omla32aer.bkt.clouddn.com/browerHistory.png)
 　　在`BrowserRouter` 的reander方法中，我们可以看到，实际上该组将就是将Router组件进行了封装，并将`createBrowserHistory`方法创建的history对象通过props的形式传给Router组件。
 ```
