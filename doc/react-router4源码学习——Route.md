@@ -1,7 +1,7 @@
 ### react-router源码学习(3) —— Route
 
-　　在前两节，已经学习了`react-router4`中的最外层组件`Router`，并且了解了 `react-router`中的一个重要的库 `history`。这回，我们开始学习 `react-router` 中离视图最近的一个组件 —— `route`。 
-　　我们阅读`route`组件的源码，可以发现它所接收的props要比`router`组件多很多。那么我们现在就来了解一下`route`组件中接收的主要设置有哪些。 
+　　在前两节，已经学习了`react-router4`中的最外层组件`Router`，并且了解了 `react-router`中的一个重要的库 `history`。这回，我们开始学习 `react-router` 中离视图最近的一个组件 —— `route`。  
+　　我们阅读`route`组件的源码，可以发现它所接收的props要比`router`组件多很多。那么我们现在就来了解一下`route`组件中接收的主要设置有哪些。  
 
 ```
     // 设置当前路由的路径，非必填项。若为空，则代表该路由组件默认会渲染。

@@ -73,7 +73,7 @@ class Route extends React.Component {
     const { route } = router;
     const pathname = (location || route.location).pathname;
 
-    // 接收pathname和各项设置，返回 match数据
+    // 接收pathname和各项设置，返回 match数据 根据当前location.pathname是否与match.url相同 若相同则 则返计算的match 否则返回null
     return matchPath(pathname, { path, strict, exact, sensitive }, route.match);
   }
 
