@@ -57,6 +57,7 @@ class Route extends React.Component {
     
   };
 
+  // 计算match 
   computeMatch(
     { computedMatch, location, path, strict, exact, sensitive },
     router

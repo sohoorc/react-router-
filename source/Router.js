@@ -43,7 +43,7 @@ class Router extends React.Component {
     match: this.computeMatch(this.props.history.location.pathname)
   };
 
-  // 返回当前匹配的match
+  // 计算match
   computeMatch(pathname) {
     return {
       path: "/",
