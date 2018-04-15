@@ -40,6 +40,7 @@ class Route extends React.Component {
     router: PropTypes.object.isRequired
   };
 
+  // 定义react context中的属性
   getChildContext() {
     return {
       router: {
@@ -57,7 +58,7 @@ class Route extends React.Component {
     
   };
 
-  // 计算match 
+  // 计算match
   computeMatch(
     { computedMatch, location, path, strict, exact, sensitive },
     router
@@ -112,6 +113,7 @@ class Route extends React.Component {
       '<Route> elements should not change from controlled to uncontrolled (or vice versa). You provided a "location" prop initially but omitted it on a subsequent render.'
     );
 
+    // 更新state中的match
     this.setState({
       match: this.computeMatch(nextProps, nextContext.router)
     });
@@ -124,12 +126,14 @@ class Route extends React.Component {
     const location = this.props.location || route.location;
     const props = { match, location, history, staticContext };
 
+    // 使用component的方式渲染组件
     if (component) return match ? React.createElement(component, props) : null;
 
+    // 使用render的方式渲染组件
     if (render) return match ? render(props) : null;
 
+    // 使用children的方式渲染组件
     if (typeof children === "function") return children(props);
-
     if (children && !isEmptyChildren(children))
       return React.Children.only(children);
 
