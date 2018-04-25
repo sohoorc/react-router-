@@ -11,7 +11,7 @@ const isModifiedEvent = event =>
  */
 class Link extends React.Component {
   static propTypes = {
-    onClick: PropTypes.func,
+    onClick: PropTypes.func, // Link可以接收一个onClick方法
     target: PropTypes.string,
     replace: PropTypes.bool,
     to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
