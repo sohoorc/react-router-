@@ -10,8 +10,9 @@ const isModifiedEvent = event =>
  * The public API for rendering a history-aware <a>.
  */
 class Link extends React.Component {
+  // Link 所暴漏出的API
   static propTypes = {
-    onClick: PropTypes.func, // 
+    onClick: PropTypes.func, // 点击事件
     target: PropTypes.string,
     replace: PropTypes.bool,
     to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
