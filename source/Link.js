@@ -13,9 +13,9 @@ class Link extends React.Component {
   // Link 所暴漏出的API
   static propTypes = {
     onClick: PropTypes.func, // 点击事件
-    target: PropTypes.string,
-    replace: PropTypes.bool,
-    to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+    target: PropTypes.string, // target
+    replace: PropTypes.bool, // 是否使用replace方法进行跳转，replace() 方法不会在 History 对象中生成一个新的记录。当使用该方法时，新的 URL 将覆盖 History 对象中的当前记录，所以浏览器回退功能将无法使用
+    to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired, // 期望前往的路由地址
     innerRef: PropTypes.oneOfType([PropTypes.string, PropTypes.func])
   };
 
@@ -73,7 +73,7 @@ class Link extends React.Component {
 
     const href = history.createHref(location);
     return (
-      <a {...props} onClick={this.handleClick} href={href} ref={innerRef} />
+      <a {...props} onClick={this.handleClick} href={href} ref={innerRef} /> // link的本质是a标签，可以在link组件上设置a标签常用的属性，如 id、classname 等。
     );
   }
 }
