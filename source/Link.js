@@ -20,10 +20,10 @@ class Link extends React.Component {
   };
 
   static defaultProps = {
-    replace: false
+    replace: false // 定义replace的默认值
   };
 
-  static contextTypes = {
+  static contextTypes = { // 上下文中的router对象
     router: PropTypes.shape({
       history: PropTypes.shape({
         push: PropTypes.func.isRequired,
